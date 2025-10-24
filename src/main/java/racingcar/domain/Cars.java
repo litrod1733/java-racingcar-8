@@ -6,7 +6,7 @@ import java.util.List;
 public class Cars {
 	private final List<Car> cars;
 
-	private Cars(String csv) {
+	private Cars(List<Car> cars) {
 		this.cars = List.copyOf(cars);
 	}
 	public static Cars fromCsv(String csv) {
