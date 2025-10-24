@@ -1,5 +1,7 @@
 package racingcar.domain;
 
+import racingcar.domain.strategy.MoveStrategy;
+
 import java.util.Arrays;
 import java.util.List;
 
@@ -18,5 +20,10 @@ public class Cars {
 		List<Car> cars = names.stream().map(Car::new).toList();
 
 		return new Cars(cars);
+	}
+	public void moveAll(MoveStrategy strategy) {
+		for (Car car : cars) {
+			car.moveIf(strategy);
+		}
 	}
 }

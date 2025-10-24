@@ -12,6 +12,9 @@ public class RacingGame {
 	}
 	public void play() {
 		// 시도 횟수만큼 반복
+		for (int i = 0; i < attempts; i++) {
+			cars.moveAll(strategy);
+		}
 	}
 	public Cars getCars() {
 		return cars;

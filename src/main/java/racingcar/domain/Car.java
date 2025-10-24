@@ -1,5 +1,7 @@
 package racingcar.domain;
 
+import racingcar.domain.strategy.MoveStrategy;
+
 public class Car {
 	private final String name;
 	private int position = 0;
@@ -16,6 +18,11 @@ public class Car {
 	}
 	public int getPosition() {
 		return this.position;
+	}
+	public void moveIf(MoveStrategy strategy) {
+		if (strategy.movable()) {
+			this.position++;
+		}
 	}
 	@Override
 	public String toString() {
