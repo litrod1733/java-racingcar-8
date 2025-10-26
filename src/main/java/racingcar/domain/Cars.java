@@ -1,12 +1,11 @@
 package racingcar.domain;
 
 import racingcar.domain.strategy.MoveStrategy;
-import java.util.Arrays;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
 
-public class Cars {
+import java.util.*;
+import java.util.stream.Stream;
+
+public class Cars implements Iterable<Car> {
 	private final List<Car> cars;
 
 	private Cars(List<Car> cars) {
@@ -43,4 +42,18 @@ public class Cars {
 			car.moveIf(strategy);
 		}
 	}
+
+	public List<Car> toList() {
+		return Collections.unmodifiableList(cars);
+	}
+
+	public Stream<Car> stream() {
+		return cars.stream();
+	}
+
+	@Override
+	public Iterator<Car> iterator() {
+		return cars.iterator();
+	}
+
 }
