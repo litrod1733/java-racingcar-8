@@ -21,6 +21,7 @@ public class Application {
 
         OutputView.printStart();
 
+        RandomMoveStrategy strategy = new RandomMoveStrategy();
         for (int i = 0; i < attempts; i++) {
             cars.moveAll(new RandomMoveStrategy());
             OutputView.printRound(cars);

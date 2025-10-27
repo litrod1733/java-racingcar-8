@@ -9,7 +9,6 @@ public final class OutputView {
 	private OutputView() {}
 
 	public static void printStart() {
-		System.out.println();
 		System.out.println("실행 결과");
 	}
 
