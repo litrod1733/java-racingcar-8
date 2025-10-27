@@ -24,7 +24,7 @@ public final class OutputView {
 		for (int i = 0; i < position; i++) {
 			bar.append("-");
 		}
-		System.out.println(name + ":" + bar);
+		System.out.println(name + " : " + bar);
 	}
 
 	public static void printWinners(final List<String> winners) {
